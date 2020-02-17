@@ -14,8 +14,6 @@ import pages.BookingSearchPage;
 import java.util.List;
 
 import static com.sun.jmx.snmp.ThreadContext.contains;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsIterableContaining.hasItem;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class BookingSearchSteps {
