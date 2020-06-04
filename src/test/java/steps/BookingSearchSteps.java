@@ -14,6 +14,8 @@ import pages.BookingSearchPage;
 import java.util.List;
 
 import static com.sun.jmx.snmp.ThreadContext.contains;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsIterableContaining.hasItem;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class BookingSearchSteps {
@@ -44,6 +46,10 @@ public class BookingSearchSteps {
         bookingSearchPage = new BookingSearchPage(driver);
         List<String> hotels = bookingSearchPage.getResultLinks();
         assertThat(hotels, contains(result));
+
+//        assertThat(String.format("There are no results for search string '%s' on first search page", result),
+//                bookingSearchPage.getResultLinks(),
+//                hasItem(result));
     }
 
     private void assertThat(List<String> hotels, boolean contains) {
